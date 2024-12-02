@@ -19,21 +19,33 @@
     }
 }
 
+@mixin mobile{
+    @media (max-width:$mobile) {
+        @content;
+    }
+}
+
 body{
     color: $text-color;
     background-color: $primary-color;
 }
 
 .main{
-    @include flexCenter(column);
+    @include flexCenter(row);
     width: 80%;
     margin: 0 auto;  
-    &__paragraph{
+    &__paragraph1{
         font-weight:weight("bold");
         color: $accent-color;
         &:hover{
             color: white;
         }
+    }
+    &__paragraph2{
+        @extend &__paragraph1;
+    }
+    @include mobile(){
+        flex-direction: column
     }
 }
 .light{
