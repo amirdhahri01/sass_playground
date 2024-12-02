@@ -5,26 +5,33 @@
 }
 
 body {
+  color: #fff;
   background-color: #272727;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 40%;
+  margin: 0 auto;
+}
+.main__paragraph1, .main__paragraph2 {
+  font-weight: 900;
+  color: #ff652f;
+}
+.main__paragraph1:hover, .main__paragraph2:hover {
   color: white;
-  height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
 }
-
-h1, h2, h3 {
-  font-weight: 400;
+.main__paragraph2:hover {
+  color: green;
 }
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */
   padding: 1rem;
 }
 
