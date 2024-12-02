@@ -42,7 +42,12 @@ body{
         }
     }
     &__paragraph2{
-        @extend &__paragraph1;
+
+        @extend .main__paragraph1;
+
+        &:hover{
+            color: $green-color;
+        }
     }
     @include mobile(){
         flex-direction: column
