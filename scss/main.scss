@@ -1,3 +1,4 @@
+@import "./_resets";
 $primary-color : #272727;
 $accent-color : #ff652f;
 $text-color : #fff;
@@ -14,7 +15,11 @@ body{
 .main{
     width: 80%;
     margin: 0 auto;  
-    p{
+    &__paragraph{
         font-weight: map-get($font-weights, "bold");
+        color: $accent-color;
+        &:hover{
+            color: white;
+        }
     }
 }
